@@ -1,0 +1,18 @@
+def ordenamiento_burbuja(numeros):
+    n = len(numeros)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if numeros[j] > numeros[j+1]:
+                numeros[j], numeros[j+1] = numeros[j+1], numeros[j]
+
+numeros = []
+
+cantidad = int(input('¿Cuántos números deseas ingresar?: '))
+
+for i in range(cantidad):
+    numero = int(input(f'Ingresa el número {i+1}: '))
+    numeros.append(numero)
+
+ordenamiento_burbuja(numeros)
+
+print('La lista ordenada es:', numeros)
